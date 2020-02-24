@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2020_02_24_152733) do
     t.text "point1", null: false
     t.text "point2"
     t.text "point3"
-    t.text "impression"
-    t.bigint "user_id"
-    t.bigint "memo_id"
+    t.text "impression", null: false
+    t.bigint "user_id", null: false
+    t.bigint "memo_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["memo_id"], name: "index_memos_on_memo_id"
