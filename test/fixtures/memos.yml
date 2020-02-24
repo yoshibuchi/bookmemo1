@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  point1: MyText
+  point2: MyText
+  point3: MyText
+  impression: 
+  user: one
+  memo: one
+
+two:
+  point1: MyText
+  point2: MyText
+  point3: MyText
+  impression: 
+  user: two
+  memo: two
