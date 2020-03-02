@@ -4,6 +4,6 @@ class AddDetailsToBooks < ActiveRecord::Migration[5.2]
     add_column :books, :point2, :text
     add_column :books, :point3, :text
     add_column :books, :impression, :text, null: false
-    add_reference :user, foreign_key: true
+    add_reference :users, foreign_key: true
   end
 end
