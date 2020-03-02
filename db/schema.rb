@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2020_03_02_152118) do
     t.text "point2"
     t.text "point3"
     t.text "impression", null: false
-    t.integer "user_id", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -33,10 +32,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_152118) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "{:foreign_key=>true}_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["{:foreign_key=>true}_id"], name: "index_users_on_{:foreign_key=>true}_id"
   end
 
 end
