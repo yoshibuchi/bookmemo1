@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_24_141652) do
+ActiveRecord::Schema.define(version: 2020_03_02_152118) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.string "author", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "point1", null: false
+    t.text "point2"
+    t.text "point3"
+    t.text "impression", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -28,8 +32,10 @@ ActiveRecord::Schema.define(version: 2020_02_24_141652) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "{:foreign_key=>true}_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["{:foreign_key=>true}_id"], name: "index_users_on_{:foreign_key=>true}_id"
   end
 
 end
