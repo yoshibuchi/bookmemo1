@@ -1,0 +1,15 @@
+.top {
+  height: 100vh;
+  margin: 0 auto;
+  &__menubar {
+    width: 100%;
+    height: 100px;
+    background-color: #B0941E;
+    font-family: 'Apple Chancery';
+  }
+  &__contents {
+   width: 100%;
+   height: 80%;
+   margin-top: 40px;
+  }
+}
