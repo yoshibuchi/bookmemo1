@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_03_02_152118) do
     t.text "point2"
     t.text "point3"
     t.text "impression", null: false
+    t.integer "user_id", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
