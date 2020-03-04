@@ -10,6 +10,8 @@
   }
   &__contents {
    height: 85%;
+   background-image: url("upload.jpg");
+   background-size: cover;
    background-color: #FFF5EE;
    overflow: scroll;
   }
