@@ -28,18 +28,33 @@
         border: 3px solid black;
         border-radius: 5px;
         color: #180027;
+        &__text {
+          color: #180027;
+          text-decoration: none;
+        }
       }
       &__content:hover {
         background-color: #FAEBD7;
       }
       &__content1 {
+        font-size: 30px;
+        margin-right: 50px;
+        height: 40px;
+        border: 3px solid black;
+        border-radius: 5px;
+        color: #180027;
+      }
+      &__content1:hover {
+        background-color: #FAEBD7;
+      }
+      &__content2 {
         height: 40px;
         font-size: 30px;
         border: 3px solid black;
         border-radius: 5px;
         color: #180027;
       }
-      &__content1:hover {
+      &__content2:hover {
         background-color: #FAEBD7;
       }
     }
