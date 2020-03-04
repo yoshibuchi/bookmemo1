@@ -1,0 +1,22 @@
+- @books.each do |book|
+  .top__contents__book
+    .top__contents__book__box
+      .top__contents__book__box__text
+        本のタイトル:
+        = book.title
+      .top__contents__book__box__text1
+        本の著者:
+        = book.author
+      .top__contents__book__box__text2
+        ポイント1：
+        = book.point1
+      .top__contents__book__box__text3
+        ポイント2：
+        = book.point2
+      .top__contents__book__box__text4
+        ポイント3：
+        = book.point3
+      .top__contents__book__box__text5
+        感想（感想、どのような行動を取るか。など）
+      .top__contents__book__box__text6
+        %p= book.impression
