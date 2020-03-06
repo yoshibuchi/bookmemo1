@@ -2,17 +2,15 @@
   height: 100%;
   margin: 0 auto;
   position: fixed;
-  &__menubar {
-    width: 100%;
-    height: 100px;
-    background-color: #B0941E;
-    font-family: 'Apple Chancery';
-  }
   &__contents {
    height: 85%;
    background-image: url("upload.jpg");
    background-size: cover;
    background-color: #FFF5EE;
    overflow: scroll;
+  }
+  &__footer {
+    height: 100px;
+    background-color: #B0941E;
   }
 }
