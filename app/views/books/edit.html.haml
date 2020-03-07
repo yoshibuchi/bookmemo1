@@ -1,3 +1,31 @@
-.edit
+.book-edit
   %h1 投稿を編集する
-  = render partial: "form", locals: { book: @book }
+  = form_with model: @book, local: true, class: "newpage" do |f|
+    .newpage__form
+      .newpage__form__content
+        %label.newpage__form__content__form-label{for: "title"} 本のタイトル
+        %span.newpage__form__content__require 必須
+        = f.text_field(:title, class: "newpage__form__content__input-default", placeholder: "本のタイトルを入力してください")
+      .newpage__form__content1
+        %label.newpage__form__content1__form-label{for: "author"} 著者名
+        %span.newpage__form__content1__require 必須
+        = f.text_field(:author, class: "newpage__form__content1__input-default", placeholder: "著者名を入力してください")
+      .newpage__form__content2
+        %label.newpage__form__content2__form-label{for: "point1"} Point1
+        %span.newpage__form__content2__require 必須
+        = f.text_field(:point1, class: "newpage__form__content2__input-default", placeholder: "ポイントを入力してください")
+      .newpage__form__content3
+        %label.newpage__form__content3__form-label{for: "point2"} Point2
+        %span.newpage__form__content3__require 
+        = f.text_field(:point2, class: "newpage__form__content3__input-default", placeholder: "")
+      .newpage__form__content4
+        %label.newpage__form__content4__form-label{for: "point3"} point3
+        %span.newpage__form__content4__require 
+        = f.text_field(:point3, class: "newpage__form__content4__input-default", placeholder: "")
+      .newpage__form__content5
+        %label.newpage__form__content5__form-label{for: "impression"} Point言語化
+        %span.newpage__form__content5__require 必須
+        = f.text_area(:impression, class: "newpage__form__content5__input-default", placeholder: "ポイントを言語化（何が印象に残ったか、どのような行動を取るかなど）を入力してください")
+      .newpage__form__submit
+        = f.submit class: 'newpage__form__submit__field-btn', value:'投稿する'
+  
