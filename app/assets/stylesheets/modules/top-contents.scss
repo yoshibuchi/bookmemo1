@@ -6,6 +6,14 @@
     height: 20%;
     background-color: #faebd7;
     border-radius: 5px;
+    &__list {
+      float: right;
+      width: 30px;
+      height: 30px;
+      &__icon {
+        font-size: 30px;
+      }
+    }
     &__text {
       font-size: 20px;
       font-weight: bold;
