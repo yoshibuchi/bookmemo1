@@ -2,7 +2,8 @@
   .top__contents__book
     .top__contents__book__box
       .top__contents__book__box__list
-        = fa_icon 'bars', class: 'top__contents__book__box__list__icon'
+        = link_to edit_book_path(book.id) do
+          = fa_icon 'edit', class: 'top__contents__book__box__list__icon'
       .top__contents__book__box__text
         本のタイトル:
         = book.title
