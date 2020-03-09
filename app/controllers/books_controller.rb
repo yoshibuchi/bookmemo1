@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-    before_action :set_book, only: [:edit, :destroy]
+    before_action :set_book, only: [:edit, :destroy, :update]
     def index
       @books = Book.all
     end
@@ -18,6 +18,11 @@ class BooksController < ApplicationController
     def destroy
       @book.destroy
       redirect_to root_path, notice: "投稿を削除しました。"
+    end
+
+    def update
+      @book.update!(book_params)
+      redirect_to root_path, notice: "投稿内容を更新しました。"
     end
   
 
