@@ -4,6 +4,8 @@
       .top__contents__book__box__list
         = link_to edit_book_path(book.id) do
           = fa_icon 'edit', class: 'top__contents__book__box__list__icon'
+        = link_to book_path(book.id), method: :delete, data: { confirm: "削除しますか？" }  do
+          = fa_icon 'trash', class: 'top__contents__book__box__list__icon1'
       .top__contents__book__box__text
         本のタイトル:
         = book.title
@@ -20,6 +22,6 @@
         ポイント3：
         = book.point3
       .top__contents__book__box__text5
-        感想（感想、どのような行動を取るか。など）
+        ポイントを言語化（何が印象に残ったか、どのような行動を取るかなど）しよう！
       .top__contents__book__box__text6
         %p= book.impression

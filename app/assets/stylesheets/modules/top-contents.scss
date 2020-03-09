@@ -6,12 +6,35 @@
     height: 20%;
     background-color: #faebd7;
     border-radius: 5px;
+    padding: 10px;
     &__list {
       float: right;
-      width: 30px;
+      width: 100px;
       height: 30px;
+      padding: 10px;
+      text-align: left;
       &__icon {
+        height: 30px;
+        width: 30px;
         font-size: 30px;
+        margin-left: 3px;
+        text-decoration: none;
+        color: blue;
+      }
+      a {
+        text-decoration: none;
+      }
+      ::before {
+        bottom: 0;
+      }
+      &__icon1 {
+        font-size: 30px;
+        margin-left: 3px;
+        text-decoration: none;
+        color: blue;
+      }
+      a {
+        text-decoration: none;
       }
     }
     &__text {
