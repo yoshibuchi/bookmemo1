@@ -1,0 +1,40 @@
+.show__contents {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("upload.jpg");
+  background-size: cover;
+  &__book {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20px;
+    &__box {
+      height: 20%;
+      background-color: #faebd7;
+      border-radius: 5px;
+      padding: 10px;
+      &__text {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      &__text1 {
+        font-size: 20px;
+      }
+      &__text2 {
+        font-size: 20px;
+      }
+      &__text3 {
+        font-size: 20px;
+      }
+      &__text4 {
+        font-size: 20px;
+      }
+      &__text5 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      &__text6 {
+        font-size: 20px;
+      }
+    }
+  }
+}
