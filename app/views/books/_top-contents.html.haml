@@ -6,6 +6,8 @@
           = fa_icon 'edit', class: 'top__contents__book__box__list__icon'
         = link_to book_path(book.id), method: :delete, data: { confirm: "削除しますか？" }  do
           = fa_icon 'trash', class: 'top__contents__book__box__list__icon1'
+        = link_to book_path(book.id) do
+          = fa_icon 'asterisk', class: 'top__contents__book__box__list__icon2'
       .top__contents__book__box__text
         本のタイトル:
         = book.title
