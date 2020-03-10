@@ -1,0 +1,24 @@
+.show
+  = render partial: "header"
+  .show__contents
+    .show__contents__book
+      .show__contents__book__box
+        .show__contents__book__box__text
+          本のタイトル:
+          = @book.title
+        .show__contents__book__box__text1
+          本の著者:
+          = @book.author
+        .show__contents__book__box__text2
+          ポイント1：
+          = @book.point1
+        .show__contents__book__box__text3
+          ポイント2：
+          = @book.point2
+        .show__contents__book__box__text4
+          ポイント3：
+          = @book.point3
+        .show__contents__book__box__text5
+          ポイントを言語化（何が印象に残ったか、どのような行動を取るかなど）しよう！
+        .show__contents__book__box__text6
+          %p= @book.impression
