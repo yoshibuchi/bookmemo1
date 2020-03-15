@@ -8,4 +8,5 @@
       .top__menubar__header__menu__content1
         マイページ
       .top__menubar__header__menu__content2
-        ログアウト
+        = link_to "ログアウト", destroy_user_session_path, class: "top__menubar__header__menu__content2__text", method: :delete
+        
