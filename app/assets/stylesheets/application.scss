@@ -13,15 +13,16 @@
  *= require_tree .
  *= require_self
  */
- @import "font-awesome";
  @import "./reset";
+ @import "font-awesome";
+ @import "modules/header";
  @import "modules/menubar";
  @import "modules/books";
  @import "modules/form";
  @import "modules/top-contents";
  @import "modules/new-page";
- @import "modules/header";
  @import "modules/footer";
  @import "modules/book-edit";
  @import "modules/create";
  @import "modules/show";
+ @import "users/registration";
