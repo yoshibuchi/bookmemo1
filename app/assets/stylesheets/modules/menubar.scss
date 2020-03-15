@@ -56,6 +56,10 @@
         border: 3px solid black;
         border-radius: 5px;
         color: #180027;
+        &__text {
+          text-decoration: none;
+          color: #180027;
+        }
       }
       &__content2:hover {
         background-color: #FAEBD7;
