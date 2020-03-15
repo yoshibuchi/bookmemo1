@@ -1,21 +1,29 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.registration
+  .registration__text
+    %h2 新規登録
+  = form_with model: @user, url: user_registration_path, id: 'registration_form', class: 'registration__form', local: true do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .regisdtration__form__box
+      .registration__form__box__field
+        = f.label :Eメール, class: "registration__form__box__field__label"
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "registration__form__box__field__email"
+      .registration__form__box__field1
+        = f.label :ニックネーム, class: "registration__form__box__field1__label"
+        %em (最大6文字)
+        %br/
+        = f.text_field :nickname, autofocus: true, maxlength: "8", class: "registration__form__box__field1__nickname"
+      .registration__form__box__field2
+        = f.label :パスワード, class: "registration__form__box__field2__label"
+        - if @minimum_password_length
+          %em
+            (最小#{@minimum_password_length}文字)
+        %br/
+        = f.password_field :password, autocomplete: "new-password", class: "registration__form__box__field2__password"
+      .registration__form__box__field3
+        = f.label :パスワード確認用, class: "registration__form__box__field3__label"
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: "registration__form__box__field3__confirmation"
+      .registration__form__box__actions
+        = f.submit "新規登録", class: "registration__form__box__actions__text"
+        -# = render "devise/shared/links"
