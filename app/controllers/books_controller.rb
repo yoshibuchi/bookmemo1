@@ -17,12 +17,12 @@ class BooksController < ApplicationController
 
     def destroy
       @book.destroy
-      redirect_to root_path, notice: "投稿を削除しました。"
+      redirect_to root_path
     end
 
     def update
       @book.update!(book_params)
-      redirect_to root_path, notice: "投稿内容を更新しました。"
+      redirect_to root_path
     end
 
     def show
