@@ -9,7 +9,12 @@ class BooksController < ApplicationController
     end
 
     def create
-      @book = Book.create(book_params)
+      @book = Book.new(book_params)
+      if @book.save
+        redirect_to root_path
+      else
+        redirect_to root_path
+      end
     end
 
     def edit
@@ -32,10 +37,12 @@ class BooksController < ApplicationController
 
 private
     def book_params
-      params.require(:book).permit(:title, :author, :point1, :point2, :point3, :impression)
+      params.require(:book).permit(:title, :author, :point1, :point2, :point3, :impression).merge(user_id: current_user.id)
     end
+
 
     def set_book
       @book = Book.find(params[:id])
     end
+
 end
