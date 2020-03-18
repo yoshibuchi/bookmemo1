@@ -16,7 +16,7 @@
       color: #7d4a31;
     }
     &__menu {
-      width: 60%;
+      width: 70%;
       margin-left: 100px;
       display: flex;
       height: 60px;
@@ -62,6 +62,41 @@
         }
       }
       &__content2:hover {
+        background-color: #FAEBD7;
+      }
+      &__content3 {
+        width: 150px;
+        height: 40px;
+        font-size: 30px;
+        border: 3px solid black;
+        border-radius: 5px;
+        color: #180027;
+        text-align: center;
+        &__text {
+          text-decoration: none;
+          color: #180027;
+          font-weight: bold;
+        }
+      }
+      &__content3:hover {
+        background-color: #FAEBD7;
+      }
+      &__content4 {
+        width: 150px;
+        height: 40px;
+        font-size: 30px;
+        border: 3px solid black;
+        border-radius: 5px;
+        color: #180027;
+        text-align: center;
+        font-weight: bold;
+        margin-left: 50px;
+        &__text {
+          text-decoration: none;
+          color: #180027;
+        }
+      }
+      &__content4:hover {
         background-color: #FAEBD7;
       }
     }
