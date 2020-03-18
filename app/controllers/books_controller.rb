@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
     before_action :set_book, only: [:edit, :destroy, :update, :show]
+    before_action :login_required
+    skip_before_action :login_required
     def index
       @books = Book.all
     end
@@ -43,5 +45,9 @@ private
 
     def set_book
       @book = Book.find(params[:id])
+    end
+
+    def login_required
+      redirect_to root_path unless current_user
     end
 end
