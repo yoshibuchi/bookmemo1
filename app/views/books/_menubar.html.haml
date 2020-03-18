@@ -3,10 +3,16 @@
     .top__menubar__header__title
       BOOKMEMO
     .top__menubar__header__menu
-      .top__menubar__header__menu__content
-        = link_to "投稿する", new_book_path, class: "top__menubar__header__menu__content__text"
-      .top__menubar__header__menu__content1
-        マイページ
-      .top__menubar__header__menu__content2
-        = link_to "ログアウト", destroy_user_session_path, class: "top__menubar__header__menu__content2__text", method: :delete
+      - if user_signed_in?
+        .top__menubar__header__menu__content1
+          マイページ
+        .top__menubar__header__menu__content
+          = link_to "投稿する", new_book_path, class: "top__menubar__header__menu__content__text"
+        .top__menubar__header__menu__content2
+          = link_to "ログアウト", destroy_user_session_path, class: "top__menubar__header__menu__content2__text", method: :delete
+      - else
+        .top__menubar__header__menu__content3
+          = link_to "新規登録", new_user_registration_path, class: "top__menubar__header__menu__content3__text"
+        .top__menubar__header__menu__content4
+          = link_to "ログイン", new_user_session_path, class: "top__menubar__header__menu__content4__text"
         
