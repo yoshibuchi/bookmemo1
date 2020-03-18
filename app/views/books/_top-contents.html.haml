@@ -2,10 +2,9 @@
   .top__contents__book
     .top__contents__book__box
       .top__contents__book__box__list
-        - if user_signed_in? 
-          = link_to book_path(book.id) do
-            = fa_icon 'asterisk', class: 'top__contents__book__box__list__icon2'
-        - if book.user_id == current_user.id
+        = link_to book_path(book.id) do
+          = fa_icon 'asterisk', class: 'top__contents__book__box__list__icon2'
+        - if user_signed_in? && book.user_id == current_user.id
           = link_to edit_book_path(book.id) do
             = fa_icon 'edit', class: 'top__contents__book__box__list__icon'
           = link_to book_path(book.id), method: :delete, data: { confirm: "削除しますか？" }  do
