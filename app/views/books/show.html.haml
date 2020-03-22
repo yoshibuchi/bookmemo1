@@ -22,3 +22,13 @@
           ポイントを言語化（何が印象に残ったか、どのような行動を取るかなど）しよう！
         .show__contents__book__box__text6
           %p= @book.impression
+    .show__contents__message
+      - if current_user
+        = form_with url: "/books/#{@book.id}/comments", local: true, method: :post, class: "show__contents__message__form" do
+          %h4.show__contents__message__form__title ****************コメント入力欄****************
+          %textarea{name: "text", cols: "", rows:"", placeholder: "", class: "show__contents__message__form__area",maxlength: "200"}
+          %input{type: "submit", value: "コメント", class: "show__contents__message__form__btn"}
+          %h4.show__contents__message__form__commentlist＜コメント一覧＞
+        .show__contents__message__comment
+          = render "comments/comment"
+      
