@@ -1,6 +1,6 @@
 .newpage {
   width: 100%;
-  height: 86%;
+  height: 100%;
   background: -moz-linear-gradient(top left, #FFF, #FFC778); 
   background: -webkit-linear-gradient(top left, #FFF, #FFC778); 
   background: linear-gradient(to bottom right, #FFF, #FFC778); 
@@ -12,7 +12,7 @@
     font-weight: bold;
   }
   &__form {
-    height: 72%;
+    height: 100%;
     width: 80%;
     margin: 0 auto;
     padding: 50px;
