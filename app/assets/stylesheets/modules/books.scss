@@ -1,12 +1,14 @@
 .top {
   height: 100%;
+  width: 100%;
   margin: 0 auto;
   position: fixed;
   &__contents {
-   height: 100%;
-   background-image: url("upload.jpg");
-   background-size: cover;
-   background-color: #FFF5EE;
-   overflow: scroll;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    background-image: url("upload.jpg");
+    background-size: cover;
+    background-color: #FFF5EE;
   }
 }

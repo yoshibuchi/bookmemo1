@@ -31,4 +31,8 @@
           %h4.show__contents__message__form__commentlist＜コメント一覧＞
         .show__contents__message__comment
           = render "comments/comment"
+      - else
+        .show__contents__message__comment
+          .show__contents__message__comment__commentlist＜コメント一覧＞
+          = render "comments/comment"
       
