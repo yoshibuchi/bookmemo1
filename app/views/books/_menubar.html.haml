@@ -5,7 +5,7 @@
     .top__menubar__header__menu
       - if user_signed_in?
         .top__menubar__header__menu__content1
-          マイページ
+          = link_to "マイページ", user_path(current_user.id), class: "top__menubar__header__menu__content1__text"
         .top__menubar__header__menu__content
           = link_to "投稿する", new_book_path, class: "top__menubar__header__menu__content__text"
         .top__menubar__header__menu__content2

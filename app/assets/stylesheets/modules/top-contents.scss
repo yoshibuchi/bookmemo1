@@ -46,6 +46,14 @@
         text-decoration: none;
       }
     }
+    &__article {
+      font-weight: bold;
+      color: blue;
+      &__link {
+        text-decoration: none;
+        color: blue;
+      }
+    }
     &__text {
       font-size: 20px;
       font-weight: bold;
