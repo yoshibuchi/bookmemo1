@@ -1,5 +1,8 @@
 - @comments.each do |comment|
   .comments
     .comments__content
+      .comments__content__nickname
+        = comment.user.nickname
+        からのコメント
       .comments__content__text
         = comment.text

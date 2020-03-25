@@ -11,10 +11,7 @@
             = fa_icon 'trash', class: 'top__contents__book__box__list__icon1'
       .top__contents__book__box__article
         nickname:
-        - if user_signed_in? && current_user.id == book.user_id
-          = link_to book.user.nickname, user_path(book.user.id), class: "top__contents__book__box__article__link"
-        - else
-          = "ログアウトしたユーザーです"
+        = book.user.nickname
       .top__contents__book__box__text
         本のタイトル:
         = book.title
