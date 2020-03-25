@@ -3,7 +3,7 @@ class BooksController < ApplicationController
     before_action :login_required
     skip_before_action :login_required
     def index
-      @books = Book.all
+      @books = Book.includes(:user)
     end
 
     def new
