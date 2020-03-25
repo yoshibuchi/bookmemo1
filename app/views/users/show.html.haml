@@ -1,0 +1,37 @@
+.mypage-header
+  .mypage-header__title
+    BOOKMEMO
+    .mypage-header__title__nickname
+      = @user.nickname
+      の投稿一覧
+- @books.each do |book|
+  - if user_signed_in? && current_user.id == book.user_id
+    .top__contents__book
+      .top__contents__book__box
+        .top__contents__book__box__list
+          = link_to book_path(book.id) do
+            = fa_icon 'asterisk', class: 'top__contents__book__box__list__icon2'
+          - if user_signed_in? && book.user_id == current_user.id
+            = link_to edit_book_path(book.id) do
+              = fa_icon 'edit', class: 'top__contents__book__box__list__icon'
+            = link_to book_path(book.id), method: :delete, data: { confirm: "削除しますか？" }  do
+              = fa_icon 'trash', class: 'top__contents__book__box__list__icon1'
+        .top__contents__book__box__text
+          本のタイトル:
+          = book.title
+        .top__contents__book__box__text1
+          本の著者:
+          = book.author
+        .top__contents__book__box__text2
+          ポイント1：
+          = book.point1
+        .top__contents__book__box__text3
+          ポイント2：
+          = book.point2
+        .top__contents__book__box__text4
+          ポイント3：
+          = book.point3
+        .top__contents__book__box__text5
+          ポイントを言語化（何が印象に残ったか、どのような行動を取るかなど）しよう！
+        .top__contents__book__box__text6
+          = book.impression
