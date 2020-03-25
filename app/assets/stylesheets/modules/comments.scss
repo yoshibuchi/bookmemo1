@@ -5,6 +5,11 @@
     width: 60%;
     margin: 0 auto;
     padding-top: 20px;
+    &__nickname {
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+    }
     &__text {
       font-weight: bold;
       color: #6091d3;
