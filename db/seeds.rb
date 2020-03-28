@@ -1,7 +1,80 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.create!(
+  [
+    {
+      email: 'test1@test.com',
+      nickname: 'テスト',
+      password: '00990099'
+    },
+    {
+      email: 'test2@test.com',
+      nickname: 'テストテスト',
+      password: '00880088'
+    }
+  ]
+)
+
+Book.create! (
+  [
+    {
+      title: 'メモの魔力',
+      author: '前田裕二',
+      point1: 'メモは「思考と言語化のきっかけ」を提供する',
+      point2: 'ファクト->抽象化->転用',
+      point3: '',
+      impression: 'メモした事実をどのように活かすかを考えること、メモした事実をコンパクトに抽象化し、その内容を具体的に言語化できるようにすることの大切さをこの本を読んで学びました。
+      これから何かを学んだ時、発見した時にメモをし、この2点を行動に移し、知識を吸収していきたい。',
+      user_id: 1
+    },
+    {
+      title: 'アウトプット大全',
+      author: '白樺紫苑',
+      point1: 'インプットよりもアウトプット',
+      point2: '',
+      point3: '',
+      impression: 'アウトプットが大切なのは、理解していたがなかなか行動に移せていなかった。少しインプットすれば、すぐさまアウトプットをし理解を深めるようにする。',
+      user_id: 2
+    },
+    {
+      title: 'エッセンシャル思考',
+      author: 'グレッグ・マキューン',
+      point1: 'バッファ〜不測の事態に対応する準備〜',
+      point2: '削減',
+      point3: '前進',
+      impression: 'あらかじめ何かが起こることを想定し、バッファを取り入れ、計画を立てること
+      仕事をなるべくし仕事をシンプルにすることで効率測ることにとても共感した。計画を立てその計画がうまくいく準備をして仕事の内容に関係なく
+      確実に１つ１つの仕事をこなせるようにしていきたい。',
+      user_id: 2
+    },
+    {
+        title: 'メモの魔力',
+        author: '前田裕二',
+        point1: 'メモは「思考と言語化のきっかけ」を提供する',
+        point2: 'ファクト->抽象化->転用',
+        point3: '',
+        impression: 'メモした事実をどのように活かすかを考えること、メモした事実をコンパクトに抽象化し、その内容を具体的に言語化できるようにすることの大切さをこの本を読んで学びました。
+        これから何かを学んだ時、発見した時にメモをし、この2点を行動に移し、知識を吸収していきたい。',
+        user_id: 1
+    },
+    {
+        title: 'アウトプット大全',
+        author: '白樺紫苑',
+        point1: 'インプットよりもアウトプット',
+        point2: '',
+        point3: '',
+        impression: 'アウトプットが大切なのは、理解していたがなかなか行動に移せていなかった。少しインプットすれば、すぐさまアウトプットをし理解を深めるようにする。',
+        user_id: 2
+    },
+    {
+        title: 'エッセンシャル思考',
+        author: 'グレッグ・マキューン',
+        point1: 'バッファ〜不測の事態に対応する準備〜',
+        point2: '削減',
+        point3: '前進',
+        impression: 'あらかじめ何かが起こることを想定し、バッファを取り入れ、計画を立てること
+        仕事をなるべくし仕事をシンプルにすることで効率測ることにとても共感した。計画を立てその計画がうまくいく準備をして仕事の内容に関係なく
+        確実に１つ１つの仕事をこなせるようにしていきたい。',
+        user_id: 2
+    }
+  ]
+)
+    
