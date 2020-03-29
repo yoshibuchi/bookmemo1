@@ -71,3 +71,4 @@ gem 'erb2haml'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'rails_12factor', group: :production
+gem 'rails-i18n'
