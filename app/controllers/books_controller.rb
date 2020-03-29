@@ -3,7 +3,7 @@ class BooksController < ApplicationController
     before_action :login_required
     skip_before_action :login_required
     def index
-      @books = Book.includes(:user)
+      @books = Book.includes(:user).order("created_at ASC").page(params[:page]).per(5)
     end
 
     def new
