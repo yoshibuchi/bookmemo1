@@ -2,6 +2,9 @@
 
 ## Overview
  学習本を読み終えた時に、内容を忘れないためにポイントを押さえ、アウトプットできるアプリです。
+ 
+ http://bookmemo1.herokuapp.com/
+ こちらから閲覧可能です
 
 ## Development Environment
   - Ruby '2.5.1'
@@ -19,6 +22,7 @@
 
 ### Association
   - has_many :books
+  - has_many :comments
 
 ### Book Table
 |Column|Type|Options|
@@ -33,4 +37,18 @@
 
 
 ### Association
-- has_many :users
+- belongs_to :user, optional: true
+- has_many :comments, dependent: :destroy
+
+
+### Comment Table
+|Column|Type|Options|
+|------|----|-------|
+|text|text|
+|user|index|null: false, foreign_key: true|
+|book|index|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :book
+
