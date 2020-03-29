@@ -1,5 +1,15 @@
 ja:
   activerecord:
+    models:
+      book: ブック
+    attributes:
+      book:
+        title: 本のタイトル
+        author: 著者名
+        point1: Point1
+        point2: Point2
+        point3: Point3
+        impression: Point言語化
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
@@ -204,3 +214,5 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+
+  
