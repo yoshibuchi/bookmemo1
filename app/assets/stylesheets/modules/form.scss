@@ -6,16 +6,20 @@
   background: linear-gradient(to bottom right, #FFF, #FFC778); 
   overflow: scroll;
   &__text {
-    font-size: 50px;
-    padding: 80px 50px;
+    font-size: 40px;
+    padding: 20px 20px;
     text-align: center;
     font-weight: bold;
+  }
+  &__error {
+    height: 100px;
+    width: 100%;
   }
   &__form {
     min-height: 120%;
     width: 80%;
     margin: 0 auto;
-    padding: 50px;
+    padding: 20px;
     text-align: center;
     &__content {
       height: 50px;
@@ -140,4 +144,9 @@
       }
     }
   }
+}
+
+.field_with_errors {
+  display: contents;
+  // もしくは diplay: inline;
 }

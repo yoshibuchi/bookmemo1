@@ -1,6 +1,8 @@
 = form_with model: @book, local: true, class: "newpage" do |f|
   .newpage__text
     読み終えた本を投稿しよう！
+  .newpage__error
+    = render 'shared/error_messages', model: f.object
   .newpage__form
     .newpage__form__content
       %label.newpage__form__content__form-label{for: "title"} 本のタイトル
