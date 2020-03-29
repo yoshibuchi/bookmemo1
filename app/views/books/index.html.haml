@@ -2,4 +2,6 @@
   = render partial: "menubar"
   .top__contents
     = render partial: "shared/top-contents"
+    .top__contents__page
+      = paginate(@books)
   
