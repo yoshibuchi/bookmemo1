@@ -66,21 +66,22 @@
       &__actions {
         height: 100px;
         font-size: 30px;
-        line-height: 100px;
+        text-decoration: none;
         &__text {
-          font-size: 30px;
           background: #6eb7ff;
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
           border-radius: 9px;
+          color: black;
+          vertical-align:  bottom; 
         }
         &__login {
-          padding: 8px;
-          font-size: 30px;
+          padding: 3px;
           background: #6eb7ff;
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
           border-radius: 9px;
-          text-decoration: none;
           color: black;
+          vertical-align: bottom;
+          text-decoration: none !important;
         }
       }
     }
